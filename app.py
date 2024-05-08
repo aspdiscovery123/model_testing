@@ -10,11 +10,11 @@ import json
 from tensorflow.keras import models
 import joblib
 
-smoker_encoder=joblib.load(r"C:\Users\aspdi\OneDrive\Desktop\insurance_model\smoker_encoder (1).pkl")
-region_encoder=joblib.load(r"C:\Users\aspdi\OneDrive\Desktop\insurance_model\region_en.pkl")
-gen_encoder=joblib.load(r"C:\Users\aspdi\OneDrive\Desktop\insurance_model\gen_encoder (6).pkl")
+smoker_encoder=joblib.load(r"smoker_encoder (1).pkl")
+region_encoder=joblib.load(r"region_en.pkl")
+gen_encoder=joblib.load(r"gen_encoder (6).pkl")
 
-model=models.load_model(r"C:\Users\aspdi\OneDrive\Desktop\insurance_model\insurance (1).h5")
+model=models.load_model(r"insurance (1).h5")
 import pandas as pd
 app=Flask(__name__)
 @app.route('/',methods=['POST'])
